@@ -29,9 +29,9 @@ class solution {
     }
         public static int[]  moveZeroes(int[] nums) {
         int pnt = 1;
-        for (int i = 0; i < nums.length-1; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if(nums[i]==0){
-                int temp = nums[pnt];
+                int temp = nums[]];
                 nums[pnt] = nums[pnt - 1];
                 nums[pnt + 1] = temp;
             }
