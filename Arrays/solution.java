@@ -23,19 +23,26 @@
 
 class solution {
     public static void main(String[] args) {
-        int[] nums = {0,1,0,3,10};
-        int[] ans = moveZeroes(nums);
-        System.out.println(nums);
+        int[] nums = {2,1,1,1,2};
+        int ans = majorityElement(nums);
+        System.out.println(ans);
     }
-        public static int[]  moveZeroes(int[] nums) {
-        int pnt = 1;
+    public static int majorityElement(int[] nums) {
+        int count = 0;
+        int candidate = 0;
+
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i]==0){
-                int temp = nums[]];
-                nums[pnt] = nums[pnt - 1];
-                nums[pnt + 1] = temp;
+            if (count == 0) {
+                candidate = nums[i];
+            }
+
+            if (nums[i] == candidate) {
+                count++;
+            } else {
+                count--;
             }
         }
-                return nums;
+
+        return candidate;
     }
 }
